@@ -27,8 +27,6 @@ window.TOCA_CONFIG = {
   SITE_URL: "https://www.tocadovies.com.br",
   INSTAGRAM_URL: "https://www.instagram.com/tocadovies",
 
-  // Link da categoria Achadinhos (enviar quando estiver no ar). Vazio = card "em breve".
-  ACHADINHOS_URL: "",
 
   // UTM aplicada nos links que levam da LP para o site
   SITE_UTM: "utm_source=lp&utm_medium=landing_page&utm_campaign=black_friday_2026"
