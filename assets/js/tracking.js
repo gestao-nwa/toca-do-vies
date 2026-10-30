@@ -25,7 +25,7 @@
 
   // Evento de cadastro concluído (Lead no Meta, generate_lead no GA4)
   window.tocaTrackLead = function () {
-    if (window.fbq) fbq('track', 'Lead', { content_name: 'Black Friday 2026 - Cupom 40%' });
+    if (window.fbq) fbq('track', 'Lead', { content_name: 'Black Friday 2026 - Cupom 40% Achados da Toca' });
     if (window.gtag) gtag('event', 'generate_lead', { form_name: 'black_friday_2026', coupon: cfg.COUPON });
   };
 

@@ -18,7 +18,7 @@
 </head>
 <body class="thanks">
 
-  <div class="topbar">BLACK FRIDAY TOCA · CUPOM DE 40% OFF NO SITE TODO · 01 A 30/11</div>
+  <div class="topbar">BLACK FRIDAY TOCA · CUPOM DE 40% OFF NOS ACHADOS DA TOCA · 01 A 30/11</div>
 
   <header class="header">
     <div class="container">
@@ -33,7 +33,7 @@
       <h1><span id="greeting">Cadastro confirmado!</span><br>Aqui está o seu <span class="hl">cupom exclusivo</span> de Black Friday.</h1>
 
       <div class="coupon">
-        <div class="coupon-label">Seu cupom de 40% OFF</div>
+        <div class="coupon-label">40% OFF nos Achados da Toca</div>
         <div class="coupon-code" id="coupon-code">CLASSICOS40</div>
         <button type="button" class="copy-btn" id="copy-btn">Copiar cupom</button>
       </div>
@@ -41,22 +41,23 @@
       <ul class="rules">
         <li>📅 Válido de 01 a 30/11</li>
         <li>✅ Sem pedido mínimo</li>
-        <li>🛒 Para o site todo</li>
-        <li>➕ Soma com o desconto progressivo</li>
+        <li>🛒 Exclusivo para os Achados da Toca</li>
+        <li>⚠️ Não cumulativo com o desconto progressivo</li>
       </ul>
 
       <div class="thanks-cta">
-        <a class="btn" data-site href="https://www.tocadovies.com.br">Ir para o site</a>
+        <a class="btn" data-achados href="https://www.tocadovies.com.br">Ir para o site</a>
       </div>
-      <p class="thanks-note">É só digitar o cupom no carrinho. Ele também foi enviado para o seu e-mail e WhatsApp. 💚</p>
+      <p class="thanks-note">É só escolher seus produtos nos Achados da Toca e digitar o cupom no carrinho. Ele também foi enviado para o seu e-mail e WhatsApp. 💚</p>
     </div>
   </section>
 
   <section class="thanks-products">
     <div class="container">
       <div class="section-head">
-        <span class="kicker">Por onde começar?</span>
-        <h2>Os queridinhos da Toca</h2>
+        <span class="kicker">Aproveite também</span>
+        <h2>Os mais vendidos da Toca</h2>
+        <p>Com desconto progressivo de até 25% na Black Friday.</p>
       </div>
       <div class="mini-products">
         <a data-product href="https://www.tocadovies.com.br/gorgurao/gorgurao/kit-vies-boneon-25mm-10-cores-mais-vendidas"><img src="assets/img/kit-vies-boneon.jpg" alt="" loading="lazy">Kit Viés Boneon 25mm</a>
@@ -89,6 +90,7 @@
       document.getElementById('coupon-code').textContent = cfg.COUPON;
 
       document.querySelectorAll('[data-site]').forEach(function (a) { a.href = tocaSiteUrl(); });
+      document.querySelectorAll('[data-achados]').forEach(function (a) { a.href = tocaSiteUrl(cfg.ACHADOS_URL || cfg.SITE_URL); });
       document.querySelectorAll('[data-product]').forEach(function (a) { a.href = tocaSiteUrl(a.getAttribute('href')); a.target = '_blank'; a.rel = 'noopener'; });
       document.querySelectorAll('[data-instagram]').forEach(function (a) { a.href = cfg.INSTAGRAM_URL; });
       document.querySelectorAll('[data-whatsapp]').forEach(function (a) { a.href = 'https://wa.me/' + cfg.WHATSAPP; });

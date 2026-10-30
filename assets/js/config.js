@@ -27,6 +27,10 @@ window.TOCA_CONFIG = {
   SITE_URL: "https://www.tocadovies.com.br",
   INSTAGRAM_URL: "https://www.instagram.com/tocadovies",
 
+  // Link da categoria Achados da Toca (único lugar onde o cupom vale).
+  // Vazio = botão "Ir para o site" da página de agradecimento leva à home.
+  ACHADOS_URL: "",
+
   // UTM aplicada nos links que levam da LP para o site
   SITE_UTM: "utm_source=lp&utm_medium=landing_page&utm_campaign=black_friday_2026"
 };

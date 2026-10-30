@@ -96,7 +96,7 @@ p { margin: 0; }
   border: 2px dashed rgba(79, 230, 64, .6);
   border-radius: 999px; padding: 6px 14px;
 }
-.hero h1 { font-size: clamp(36px, 5.4vw, 62px); font-weight: 900; margin: 20px 0 16px; }
+.hero h1 { font-size: clamp(34px, 4.6vw, 52px); font-weight: 900; margin: 20px 0 16px; }
 .hero h1 .hl { color: var(--lime); }
 .hero .lead { font-size: 21px; color: #d6e5d2; max-width: 34ch; }
 
@@ -191,6 +191,7 @@ p { margin: 0; }
 .section-head .kicker { font-weight: 900; font-size: 14px; letter-spacing: .18em; text-transform: uppercase; color: var(--leaf); }
 .section-head h2 { font-size: clamp(30px, 4vw, 44px); font-weight: 900; color: var(--forest); margin-top: 10px; }
 .section-head p { color: var(--muted); margin-top: 12px; }
+.section-head-sub h2 { font-size: clamp(26px, 3.2vw, 34px); }
 
 /* Como funciona */
 .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; counter-reset: step; }
@@ -234,7 +235,7 @@ p { margin: 0; }
 .product-link:hover { text-decoration: underline; }
 
 .achadinhos {
-  margin-top: 28px;
+  margin-bottom: 56px;
   display: flex; align-items: center; justify-content: space-between; gap: 24px;
   background: var(--forest); color: var(--white);
   border-radius: var(--radius); padding: 30px 34px;

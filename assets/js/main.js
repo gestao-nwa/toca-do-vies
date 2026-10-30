@@ -32,6 +32,7 @@
     a.href = 'https://wa.me/' + cfg.WHATSAPP + '?text=' + encodeURIComponent('Olá! Vim pela página da Black Friday da Toca do Viés 🧵');
   });
   document.querySelectorAll('[data-site]').forEach(function (a) { a.href = window.tocaSiteUrl(); });
+  document.querySelectorAll('[data-product]').forEach(function (a) { a.href = window.tocaSiteUrl(a.getAttribute('href')); });
   document.querySelectorAll('[data-instagram]').forEach(function (a) { a.href = cfg.INSTAGRAM_URL; });
 
   /* ---------- Formulário ---------- */
