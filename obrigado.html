@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cadastro confirmado! | Black Friday Toca do Viés</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0b1d09">
+
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@800;900&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/tracking.js"></script>
+</head>
+<body class="thanks">
+
+  <div class="topbar">BLACK FRIDAY TOCA · CUPOM DE 40% OFF NO SITE TODO · 01 A 30/11</div>
+
+  <header class="header">
+    <div class="container">
+      <img src="assets/img/logo.png" alt="Toca do Viés Aviamentos e Cia." height="40">
+      <a class="header-cta" data-site href="https://www.tocadovies.com.br">🛍️ <span>Ir para o site</span></a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <span class="eyebrow">🎉 Deu tudo certo</span>
+      <h1><span id="greeting">Cadastro confirmado!</span><br>Aqui está o seu <span class="hl">cupom exclusivo</span> de Black Friday.</h1>
+
+      <div class="coupon">
+        <div class="coupon-label">Seu cupom de 40% OFF</div>
+        <div class="coupon-code" id="coupon-code">CLASSICOS40</div>
+        <button type="button" class="copy-btn" id="copy-btn">Copiar cupom</button>
+      </div>
+
+      <ul class="rules">
+        <li>📅 Válido de 01 a 30/11</li>
+        <li>✅ Sem pedido mínimo</li>
+        <li>🛒 Para o site todo</li>
+        <li>➕ Soma com o desconto progressivo</li>
+      </ul>
+
+      <div class="thanks-cta">
+        <a class="btn" data-site href="https://www.tocadovies.com.br">Ir para o site</a>
+      </div>
+      <p class="thanks-note">É só digitar o cupom no carrinho. Ele também foi enviado para o seu e-mail e WhatsApp. 💚</p>
+    </div>
+  </section>
+
+  <section class="thanks-products">
+    <div class="container">
+      <div class="section-head">
+        <span class="kicker">Por onde começar?</span>
+        <h2>Os queridinhos da Toca</h2>
+      </div>
+      <div class="mini-products">
+        <a data-product href="https://www.tocadovies.com.br/gorgurao/gorgurao/kit-vies-boneon-25mm-10-cores-mais-vendidas"><img src="assets/img/kit-vies-boneon.jpg" alt="" loading="lazy">Kit Viés Boneon 25mm</a>
+        <a data-product href="https://www.tocadovies.com.br/alca-chic-de-poliester/kit-alca-chic-cores-campeas-de-vendas-30mm-3cm"><img src="assets/img/kit-alca-chic.jpg" alt="" loading="lazy">Kit Cores Coringa – Alça Chic</a>
+        <a data-product href="https://www.tocadovies.com.br/vies-boneon/preto"><img src="assets/img/vies-boneon-preto.jpg" alt="" loading="lazy">Viés de Boneon Preto</a>
+        <a data-product href="https://www.tocadovies.com.br/vies-de-gorgurao/preto?variant_id=26385"><img src="assets/img/vies-gorgurao-preto.jpg" alt="" loading="lazy">Viés de Gorgurão Preto</a>
+        <a data-product href="https://www.tocadovies.com.br/cursores-e-ziper/cursores/cursor-n5-retangular?variant_id=10867"><img src="assets/img/cursor-retangular.jpg" alt="" loading="lazy">Cursor Retangular nº5</a>
+        <a data-product href="https://www.tocadovies.com.br/cursores-e-ziper/cursores/cursor-n5-haste-vazada?variant_id=7429"><img src="assets/img/cursor-haste-vazada.jpg" alt="" loading="lazy">Cursor Haste Vazada nº5</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-brand">
+        <img src="assets/img/logo.png" alt="Toca do Viés Aviamentos e Cia." height="32">
+        <p>Onde a sua criatividade encontra possibilidades.</p>
+      </div>
+      <div class="footer-links">
+        <a data-site href="https://www.tocadovies.com.br" target="_blank" rel="noopener">tocadovies.com.br</a>
+        <a data-instagram href="https://www.instagram.com/tocadovies" target="_blank" rel="noopener">@tocadovies</a>
+        <a data-whatsapp href="https://wa.me/5511940026511" target="_blank" rel="noopener">(11) 94002-6511</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var cfg = window.TOCA_CONFIG || {};
+      document.getElementById('coupon-code').textContent = cfg.COUPON;
+
+      document.querySelectorAll('[data-site]').forEach(function (a) { a.href = tocaSiteUrl(); });
+      document.querySelectorAll('[data-product]').forEach(function (a) { a.href = tocaSiteUrl(a.getAttribute('href')); a.target = '_blank'; a.rel = 'noopener'; });
+      document.querySelectorAll('[data-instagram]').forEach(function (a) { a.href = cfg.INSTAGRAM_URL; });
+      document.querySelectorAll('[data-whatsapp]').forEach(function (a) { a.href = 'https://wa.me/' + cfg.WHATSAPP; });
+
+      try {
+        var lead = JSON.parse(sessionStorage.getItem('toca_lead') || 'null');
+        if (lead && lead.nome) document.getElementById('greeting').textContent = 'Cadastro confirmado, ' + lead.nome + '!';
+      } catch (e) {}
+
+      var btn = document.getElementById('copy-btn');
+      btn.addEventListener('click', function () {
+        var ok = function () {
+          btn.textContent = 'Cupom copiado! ✓';
+          btn.classList.add('copied');
+          setTimeout(function () { btn.textContent = 'Copiar cupom'; btn.classList.remove('copied'); }, 2500);
+        };
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(cfg.COUPON).then(ok, function () {});
+        } else {
+          var r = document.createRange(); r.selectNodeContents(document.getElementById('coupon-code'));
+          var sel = getSelection(); sel.removeAllRanges(); sel.addRange(r);
+          try { document.execCommand('copy'); ok(); } catch (e) {}
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
